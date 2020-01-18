@@ -28,12 +28,10 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-%global __requires_exclude ^mvn\\(org\\.apache\\.ant:ant\\)$
-
 Summary:        Extract class/interface/method definitions from sources
 Name:           qdox
 Version:        1.12.1
-Release:        10%{?dist}
+Release:        8%{?dist}
 Epoch:          0
 License:        ASL 2.0
 URL:            http://qdox.codehaus.org/
@@ -140,13 +138,6 @@ zip -u target/%{name}-%{version}.jar META-INF/MANIFEST.MF
 %doc LICENSE.txt
 
 %changelog
-* Tue Mar  1 2016 Mikolaj Izdebski <mizdebsk@redhat.com> - 0:1.12.1-10
-- Remove requires on ant
-- Resolves: rhbz#1284585
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 01.12.1-9
-- Mass rebuild 2013-12-27
-
 * Tue Aug 27 2013 Michal Srb <msrb@redhat.com> - 0:1.12.1-8
 - Install javadoc
 
